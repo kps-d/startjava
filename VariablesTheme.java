@@ -37,32 +37,24 @@ public class VariablesTheme {
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
 
-        /*System.out.println("\n4. Вывод min и max значений целых числовых типов\n");
+        System.out.println("\n4. Вывод min и max значений целых числовых типов\n");
 
         byte maxByte = 127;
-        byte incMaxByte = maxByte + 1;
-        byte decMaxByte = maxByte - 1;
         short maxShort = 32_767;
-        short incMaxShort = maxShort + 1;
-        short decMaxShort = maxShort - 1;
         int maxInt = 2_147_483_647;
-        int incMaxInt = maxInt + 1;
-        int decMaxInt = maxInt - 1;
         long maxLong = 9_223_372_036_854_775_807l;
-        long incMaxLong = maxLong + 1;
-        long decMaxLong = maxLong - 1;
         System.out.println("Первоначальное значение переменной byte: " + maxByte);
-        System.out.println("Значение после инкремента переменной byte: " + incMaxByte);
-        System.out.println("Значение после декремента переменной byte: " + decMaxByte);
+        System.out.println("Значение после инкремента переменной byte: " + maxByte++);
+        System.out.println("Значение после декремента переменной byte: " + maxByte--);
         System.out.println("Первоначальное значение переменной short: " + maxShort);
-        System.out.println("Значение после инкремента переменной short: " + incMaxShort);
-        System.out.println("Значение после декремента переменной short: " + decMaxShort);
+        System.out.println("Значение после инкремента переменной short: " + maxShort++);
+        System.out.println("Значение после декремента переменной short: " + maxShort--);
         System.out.println("Первоначальное значение переменной int: " + maxInt);
-        System.out.println("Значение после инкремента переменной int: " + incMaxInt);
-        System.out.println("Значение после декремента переменной int: " + decMaxInt);
+        System.out.println("Значение после инкремента переменной int: " + maxInt++);
+        System.out.println("Значение после декремента переменной int: " + maxInt--);
         System.out.println("Первоначальное значение переменной long: " + maxLong);
-        System.out.println("Значение после инкремента переменной long: " + incMaxLong);
-        System.out.println("Значение после декремента переменной long: " + decMaxLong);*/
+        System.out.println("Значение после инкремента переменной long: " + maxLong++);
+        System.out.println("Значение после декремента переменной long: " + maxLong--);
 
         System.out.println("\n5. Перестановка значений переменных\n");
 
@@ -95,16 +87,16 @@ public class VariablesTheme {
 
         System.out.println("\n6. Вывод символов и их кодов\n");
 
-        char hashtag = 35;
-        char ampersand = 38;
-        char commercialAt = 64;
-        char caret = 94;
-        char lowLine = 95;
-        System.out.println((int)hashtag + " " + hashtag);
-        System.out.println((int)ampersand + " " + ampersand);
-        System.out.println((int)commercialAt + " " + commercialAt);
-        System.out.println((int)caret + " " + caret);
-        System.out.println((int)lowLine + " " + lowLine);
+        char hashtag = '#';
+        char ampersand = '&';
+        char commercialAt = '@';
+        char caret = '^';
+        char lowLine = '_';
+        System.out.println((int) hashtag + " " + hashtag);
+        System.out.println((int) ampersand + " " + ampersand);
+        System.out.println((int) commercialAt + " " + commercialAt);
+        System.out.println((int) caret + " " + caret);
+        System.out.println((int) lowLine + " " + lowLine);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка\n");
 
@@ -118,15 +110,15 @@ public class VariablesTheme {
         System.out.println("   " + slash + "  " + backSlash);
         System.out.println("  " + slash + lowSlash + leftParent + " " +rightParent + backSlash);
         System.out.println(" " + slash + "      " + backSlash);
-        System.out.println("" + slash + lowSlash + lowSlash + lowSlash + lowSlash + slash + backSlash 
-            + lowSlash + lowSlash + backSlash);
+        System.out.println("" + slash + lowSlash + lowSlash + lowSlash + lowSlash + slash + 
+                backSlash + lowSlash + lowSlash + backSlash);
 
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа\n");
 
         int num = 123;
         int hungreds = num / 100;
         int tens = (num % 100) / 10;
-        int ones = ((num % 100) % 10);
+        int ones = num % 10;
         System.out.println("Число " + num + " содержит:");
         System.out.println(hungreds + " сотен");
         System.out.println(tens + " десятков");
@@ -136,10 +128,10 @@ public class VariablesTheme {
 
         System.out.println("\n9. Вывод времени\n");
 
-        int sec = 86_399;
-        int ours = sec / 3_600;
-        int minutes = (sec % 3600) / 60;
-        int second = (sec % 3600) % 60;
-        System.out.println(ours + ":" + minutes + ":" + second);
+        int totalSeconds = 86_399;
+        int hours = totalSeconds / 3_600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+        System.out.println(hours + ":" + minutes + ":" + seconds);
     }
 }
